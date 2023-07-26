@@ -60,9 +60,9 @@ function getPizzaPrice(ev){
     currentPrice=0;
     pizzaSelection=ev.target.value; //read only value dari atribut sebuah elemen/tag(id,class,name,value) dengan menggunakan this.
     availablePizzaTopping(pizzaSelection);
-    pizzaSelection==="pizza1"?pizzaPrice=pizzaPrice1:""
-    pizzaSelection==="pizza2"?pizzaPrice=pizzaPrice2:""
-    pizzaSelection==="pizza3"?pizzaPrice=pizzaPrice3:""
+    pizzaSelection==="pizza-1-value"?pizzaPrice=pizzaPrice1:""
+    pizzaSelection==="pizza-2-value"?pizzaPrice=pizzaPrice2:""
+    pizzaSelection==="pizza-3-value"?pizzaPrice=pizzaPrice3:""
     
     currentPrice=pizzaPrice+toppingPrice+pizzaSizePrice;
     writePizzaPrice.innerHTML=`${pizzaPrice}`;
@@ -138,7 +138,7 @@ function deleteTopping(list){
 function availablePizzaTopping(check){
  
     switch(check){
-        case "pizza1":
+        case "pizza-1-value":
             //able
             document.getElementById('avocado-id').disabled=false;
             document.getElementById('tuna-id').disabled=false;
@@ -157,7 +157,7 @@ function availablePizzaTopping(check){
             document.getElementById('duck-id').disabled=true;
             document.getElementById('sosis-id').disabled=true;
             break;
-        case "pizza2":
+        case "pizza-2-value":
             //able
             document.getElementById('lobster-id').disabled=false;
             document.getElementById('oyster-id').disabled=false;
@@ -176,7 +176,7 @@ function availablePizzaTopping(check){
             document.getElementById('duck-id').disabled=true;
             document.getElementById('sosis-id').disabled=true;
             break;
-        case "pizza3":
+        case "pizza-3-value":
             //able
             document.getElementById('lobster-id').disabled=false;
             document.getElementById('oyster-id').disabled=false;
