@@ -68,11 +68,13 @@ function getPizzaPrice(ev){
      for(let i=0; i<pizzaToppings.length;i++){
         if( pizzaToppings[i].disabled==true){
             let p=pizzaToppings[i].value;
-            console.log("value p:"+p);
+            
              deleteTopping(p);
         }
     }
+    
     listToppingToPrice( listPizzaTopping);
+    console.log("topping list:"+listPizzaTopping.valueOf());
 
     currentPrice=pizzaPrice+toppingPrice+pizzaSizePrice;
     writePizzaToppingPrice.innerHTML=`${toppingPrice}`;
@@ -199,10 +201,10 @@ function availablePizzaTopping(check){
             document.getElementById('topping-duck').disabled=false;
             document.getElementById('topping-sausage').disabled=false;
             //disabled
-            document.getElementById('avocado-id').disabled=true;
-            document.getElementById('lobster-id').disabled=true;
-            document.getElementById('oyster-id').disabled=true;
-            document.getElementById('salmon-id').disabled=true;
+            document.getElementById('topping-avocado').disabled=true;
+            document.getElementById('topping-lobster').disabled=true;
+            document.getElementById('topping-oyster').disabled=true;
+            document.getElementById('topping-salmon').disabled=true;
             break;
     }
 }
