@@ -58,24 +58,23 @@ for (let i=0;i<pizzaSelections.length;i++ ){
 
 function getPizzaPrice(ev){
     currentPrice=0;
-    pizzaSelection=ev.target.value; //read only value dari atribut sebuah elemen/tag(id,class,name,value) dengan menggunakan this.
+    pizzaSelection=ev.target.value; //read only value dari atribut sebuah elemen/tag(id,class,name,value) dengan menggunakan target.
+      //unchecked topping price whenever pizza is selected and destroy array element of topping list 
+      for(let i=0; i<pizzaToppings.length;i++){
+        pizzaToppings[i].checked=false;
+        if(pizzaToppings[i].checked==false){
+            let p=pizzaToppings[i].value;
+            deleteTopping(p);
+        }
+      }
+    console.log("topping list:"+listPizzaTopping.valueOf());
+    listToppingToPrice(listPizzaTopping); // to make topping price zero
+    
     availablePizzaTopping(pizzaSelection);
     pizzaSelection==="pizza-1-value"?pizzaPrice=pizzaPrice1:""
     pizzaSelection==="pizza-2-value"?pizzaPrice=pizzaPrice2:""
     pizzaSelection==="pizza-3-value"?pizzaPrice=pizzaPrice3:""
     
-     //update topping price whenever pizza is selected at last 
-     for(let i=0; i<pizzaToppings.length;i++){
-        if( pizzaToppings[i].disabled==true){
-            let p=pizzaToppings[i].value;
-            
-             deleteTopping(p);
-        }
-    }
-    
-    listToppingToPrice( listPizzaTopping);
-    console.log("topping list:"+listPizzaTopping.valueOf());
-
     currentPrice=pizzaPrice+toppingPrice+pizzaSizePrice;
     writePizzaToppingPrice.innerHTML=`${toppingPrice}`;
     writePizzaPrice.innerHTML=`${pizzaPrice}`;
@@ -215,13 +214,13 @@ function listToppingToPrice(list){
     for(let i of list){
         switch(i){
         case "avocado":
-           toppingPrice+=avocadoTopping;
+            toppingPrice+=avocadoTopping;
             break;
         case "broccoli":
-          toppingPrice+=brocoliTopping;
+            toppingPrice+=brocoliTopping;
             break;
         case "onions":
-          toppingPrice+=onionTopping;
+            toppingPrice+=onionTopping;
             break;
         case "zucchini":
             toppingPrice+=zuchiniTopping;
@@ -230,25 +229,25 @@ function listToppingToPrice(list){
             toppingPrice+=lobsterTopping;
             break;
         case 'oyster':
-           toppingPrice+=oysterTopping;
+            toppingPrice+=oysterTopping;
             break;       
         case 'salmon':
-           toppingPrice+=salmonTopping;
+            toppingPrice+=salmonTopping;
             break;
         case 'tuna':
-         toppingPrice+=tunaTopping;
+            toppingPrice+=tunaTopping;
             break;
         case 'bacon':
-          toppingPrice+=baconTopping;
+            toppingPrice+=baconTopping;
             break;
         case 'duck':
-         toppingPrice+=duckTopping;
+            toppingPrice+=duckTopping;
             break;
         case 'ham':
-        toppingPrice+=hamTopping;
+            toppingPrice+=hamTopping;
             break;
         case 'sausage':
-          toppingPrice+=sosisTopping;
+            toppingPrice+=sosisTopping;
             break;
         case list.length==0:
             toppingPrice=0;
