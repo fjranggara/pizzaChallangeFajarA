@@ -30,7 +30,7 @@ let pizzaSelection='';
 
 const pizzaSelections=document.querySelectorAll('[name=pizza]');
 const pizzaSizes=document.querySelectorAll('input[name=size]');
-const pizzaToppings=document.querySelectorAll('[name=topping]');
+const pizzaToppings=document.querySelectorAll('input[name=topping]');
 const writePizzaPrice=document.querySelector('p>span#pizza-result');
 const writePizzaSizePrice=document.querySelector('p>span#size-result');
 const writePizzaToppingPrice=document.querySelector('div>p>span#topping-result');
@@ -148,19 +148,9 @@ function deleteTopping(list){
 
 
 function availablePizzaTopping(check){
- 
+    pizzaToppings.forEach(Element=>Element.disabled=false);
     switch(check){
         case "pizza-1-value":
-            //able
-            document.getElementById('topping-avocado').disabled=false;
-            document.getElementById('topping-tuna').disabled=false;
-            document.getElementById('topping-duck').disabled=false;
-            document.getElementById('topping-sausage').disabled=false;
-
-           
-            document.getElementById('topping-lobster').disabled=false;
-            document.getElementById('topping-oyster').disabled=false;
-            document.getElementById('topping-salmon').disabled=false;
             //disabled
             document.getElementById('topping-lobster').disabled=true;
             document.getElementById('topping-oyster').disabled=true;
@@ -170,16 +160,6 @@ function availablePizzaTopping(check){
             document.getElementById('topping-sausage').disabled=true;
             break;
         case "pizza-2-value":
-            //able
-            document.getElementById('topping-lobster').disabled=false;
-            document.getElementById('topping-oyster').disabled=false;
-            document.getElementById('topping-salmon').disabled=false;
-            document.getElementById('topping-bacon').disabled=false;
-            document.getElementById('topping-duck').disabled=false;
-            document.getElementById('topping-sausage').disabled=false;
-
-            document.getElementById('topping-avocado').disabled=false;
-            document.getElementById('topping-salmon').disabled=false;
             //disabled
             document.getElementById('topping-avocado').disabled=true;
             document.getElementById('topping-tuna').disabled=true;         
@@ -187,18 +167,6 @@ function availablePizzaTopping(check){
             document.getElementById('topping-sausage').disabled=true;
             break;
         case "pizza-3-value":
-            //able
-            document.getElementById('topping-lobster').disabled=false;
-            document.getElementById('topping-oyster').disabled=false;
-            document.getElementById('topping-salmon').disabled=false;
-            document.getElementById('topping-bacon').disabled=false;
-            document.getElementById('topping-duck').disabled=false;
-            document.getElementById('topping-sausage').disabled=false;
-
-            document.getElementById('topping-avocado').disabled=false;
-            document.getElementById('topping-tuna').disabled=false;         
-            document.getElementById('topping-duck').disabled=false;
-            document.getElementById('topping-sausage').disabled=false;
             //disabled
             document.getElementById('topping-avocado').disabled=true;
             document.getElementById('topping-lobster').disabled=true;
