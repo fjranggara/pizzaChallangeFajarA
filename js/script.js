@@ -29,7 +29,7 @@ let listPizzaTopping=[];
 let pizzaSelection='';
 
 const pizzaSelections=document.querySelectorAll('[name=pizza]');
-const pizzaSizes=document.querySelectorAll('[name=pizzaSize]');
+const pizzaSizes=document.querySelectorAll('input[name=size]');
 const pizzaToppings=document.querySelectorAll('[name=topping]');
 const writePizzaPrice=document.querySelector('p>span#pizza-result');
 const writePizzaSizePrice=document.querySelector('p>span#size-result');
@@ -204,13 +204,13 @@ function listToppingToPrice(list){
         case "avocado":
            toppingPrice+=avocadoTopping;
             break;
-        case "brocoli":
+        case "broccoli":
           toppingPrice+=brocoliTopping;
             break;
-        case "onion":
+        case "onions":
           toppingPrice+=onionTopping;
             break;
-        case "zuchini":
+        case "zucchini":
             toppingPrice+=zuchiniTopping;
             break;
         case 'lobster':
@@ -234,7 +234,7 @@ function listToppingToPrice(list){
         case 'ham':
         toppingPrice+=hamTopping;
             break;
-        case 'sosis':
+        case 'sausage':
           toppingPrice+=sosisTopping;
             break;
         case list.length==0:
