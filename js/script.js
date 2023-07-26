@@ -35,7 +35,7 @@ const writePizzaPrice=document.querySelector('div>p>span#pizzaPrice');
 const writePizzaSizePrice=document.querySelector('div>p>span#sizePrice');
 const writePizzaToppingPrice=document.querySelector('div>p>span#toppingPrice');
 const writeTotalPrice=document.querySelector('div>p>span#totalPrice');
-const resetButton=document.getElementById('reset-id');
+const resetButton=document.getElementById('reset-order');
 const reset =()=>{location.reload();};
 
 // // dari stack overflow
