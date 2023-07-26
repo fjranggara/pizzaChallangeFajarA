@@ -31,10 +31,10 @@ let pizzaSelection='';
 const pizzaSelections=document.querySelectorAll('[name=pizza]');
 const pizzaSizes=document.querySelectorAll('[name=pizzaSize]');
 const pizzaToppings=document.querySelectorAll('[name=topping]');
-const writePizzaPrice=document.querySelector('div>p>span#pizzaPrice');
-const writePizzaSizePrice=document.querySelector('div>p>span#sizePrice');
-const writePizzaToppingPrice=document.querySelector('div>p>span#toppingPrice');
-const writeTotalPrice=document.querySelector('div>p>span#totalPrice');
+const writePizzaPrice=document.querySelector('p>span#pizza-result');
+const writePizzaSizePrice=document.querySelector('p>span#size-result');
+const writePizzaToppingPrice=document.querySelector('div>p>span#topping-result');
+const writeTotalPrice=document.querySelector('p>span#total-result');
 const resetButton=document.getElementById('reset-order');
 const reset =()=>{location.reload();};
 
