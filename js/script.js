@@ -63,9 +63,20 @@ function getPizzaPrice(ev){
     pizzaSelection==="pizza-1-value"?pizzaPrice=pizzaPrice1:""
     pizzaSelection==="pizza-2-value"?pizzaPrice=pizzaPrice2:""
     pizzaSelection==="pizza-3-value"?pizzaPrice=pizzaPrice3:""
+    //update previous topping price after available pizza
+    for(let i=0; i<pizzaToppings.length;i++){
+        if( pizzaToppings[i].disabled==true){
+            let p=pizzaToppings[i].value;
+            console.log("value p:"+p);
+             deleteTopping(p);
+        }
+    }
+    listToppingToPrice( listPizzaTopping);
+
     
     currentPrice=pizzaPrice+toppingPrice+pizzaSizePrice;
     writePizzaPrice.innerHTML=`${pizzaPrice}`;
+    writePizzaToppingPrice.innerHTML=`${toppingPrice}`;
     writeTotalPrice.innerHTML=`${currentPrice}`;
     console.log(currentPrice);
     console.log(pizzaSelection);
@@ -242,9 +253,7 @@ function listToppingToPrice(list){
            break;
        }
     }
-     
-    
 }
 
-   
+ 
    
