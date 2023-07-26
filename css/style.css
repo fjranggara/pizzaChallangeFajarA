@@ -449,3 +449,15 @@ input[type="radio"]:not(old):checked + label > span > span {
   background-image: -webkit-linear-gradient(#b3d98c, #3f8d4d);
   background-image: linear-gradient(#b3d98c, #3f8d4d);
 }
+
+input[type="checkbox"]:not(old):disabled + label > span:before {
+  content: "X";
+  font-display: block;
+  width: 1em;
+  color: #f54606;
+  font-size: 1em;
+  line-height: 1em;
+  text-align: center;
+  text-shadow: 0 0 0.0714em #73994d;
+  font-weight: bold;
+}
