@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="A simple web application to calculate pizza price based on it's size, topping, etc."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#3f8d4d" />
+    <meta name="msapplication-navbutton-color" content="#3f8d4d" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3f8d4d" />
+
+    <title>Pizza Challenge - RWID</title>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <!--[if lt IE 9]>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <main class="main-container">
+      <div class="hidden-laptop hidden-tablet" id="is-mobile"></div>
+
+      <header>
+        <div class="header-container">
+          <i class="fas fa-stroopwafel"></i> <span id="shop-name"></span>
+        </div>
+      </header>
+
+      <nav></nav>
+
+      <section class="profile-container">
+        <img
+          src="https://www.gravatar.com/avatar/12cf7ab815abc76ae150053eab5b6d79?s=300"
+          alt="ianrizky"
+          class="profile-image"
+        />
+        <div class="profile-description">
+          <h1 class="profile-name">ianrizky</h1>
+          <h3 class="profile-title">Web Developer</h3>
+          <div class="profile-link">
+            <a
+              target="_blank"
+              title="Facebook"
+              href="https://www.facebook.com/ianriizky"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-facebook-square"></i>
+            </a>
+            <a
+              target="_blank"
+              title="Instagram"
+              href="https://www.instagram.com/ianriizky"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              target="_blank"
+              title="LinkedIn"
+              href="https://www.linkedin.com/in/ianrizky"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              target="_blank"
+              title="Github"
+              href="https://github.com/ianriizky"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-github-square"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-pizza">
+        <div class="pizza-list">
+          <p class="pizza-header">Pizza</p>
+          <div class="pizza-container" title="Pizza Number 1">
+            <div class="pizza-image">
+              <span
+                style="
+                  background-image: url(img/pizza1.jpg);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+              ></span>
+            </div>
+            <p class="pizza-select">
+              <input type="radio" name="pizza" id="pizza-1" value="pizza-1-value"  />
+              <label for="pizza-1">
+                <span><span></span></span>Pizza 1
+              </label>
+            </p>
+            <p class="pizza-price">$8</p>
+          </div>
+          <div class="pizza-container" title="Pizza Number 2">
+            <div class="pizza-image">
+              <span
+                style="
+                  background-image: url(img/pizza2.jpg);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+              ></span>
+            </div>
+            <p class="pizza-select">
+              <input type="radio" name="pizza" id="pizza-2" value="pizza-2-value" />
+              <label for="pizza-2">
+                <span><span></span></span>
+                Pizza 2
+              </label>
+            </p>
+            <p class="pizza-price">$10</p>
+          </div>
+          <div class="pizza-container" title="Pizza Number 3">
+            <div class="pizza-image">
+              <span
+                style="
+                  background-image: url(img/pizza3.jpg);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+              ></span>
+            </div>
+            <p class="pizza-select">
+              <input type="radio" name="pizza" id="pizza-3" value="pizza-3-value" />
+              <label for="pizza-3">
+                <span><span></span></span>Pizza 3
+              </label>
+            </p>
+            <p class="pizza-price">$12</p>
+          </div>
+        </div>
+        <div class="size-list">
+          <p class="size-header">Size</p>
+          <div
+            class="size-container"
+            title="Decrease $1 from normal pizza price"
+          >
+            <input type="radio" name="size" id="size-small" value="small" />
+            <label for="size-small" style="color: #656565">
+              <span><span></span></span>Small (-$1)
+            </label>
+          </div>
+          <div class="size-container" title="Use normal pizza price">
+            <input type="radio" name="size" id="size-medium" value="medium" />
+            <label for="size-medium" style="color: #656565">
+              <span><span></span></span>Medium
+            </label>
+          </div>
+          <div
+            class="size-container"
+            title="Increase $2 from normal pizza price"
+          >
+            <input type="radio" name="size" id="size-large" value="large" />
+            <label for="size-large" style="color: #656565">
+              <span><span></span></span>Large (+$2)
+            </label>
+          </div>
+        </div>
+
+        <div class="topping-list">
+          <p class="topping-header">Topping</p>
+          <div class="topping-container" title="Avocado topping | Price $1">
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-avocado"
+              value="avocado"
+            />
+            <label for="topping-avocado" style="color: #656565">
+              <span><span></span></span>Avocado ($1)
+            </label>
+          </div>
+          <div class="topping-container" title="Broccoli topping | Price $1">
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-broccoli"
+              value="broccoli"
+            />
+            <label for="topping-broccoli" style="color: #656565">
+              <span><span></span></span>Broccoli ($1)
+            </label>
+          </div>
+          <div class="topping-container" title="Onions topping | Price $1">
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-onions"
+              value="onions"
+            />
+            <label for="topping-onions" style="color: #656565">
+              <span><span></span></span>Onions ($1)
+            </label>
+          </div>
+          <div class="topping-container" title="Zucchini topping | Price $1">
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-zucchini"
+              value="zucchini"
+            />
+            <label for="topping-zucchini" style="color: #656565">
+              <span><span></span></span>Zucchini ($1)
+            </label>
+          </div>
+          <div class="topping-container" title="Lobster topping | Price $2">
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-lobster"
+              value="lobster"
+            />
+            <label for="topping-lobster" style="color: #656565">
+              <span><span></span></span>Lobster ($2)
+            </label>
+          </div>
+          <div class="topping-container" title="Oyster topping | Price $2">
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-oyster"
+              value="oyster"
+            />
+            <label for="topping-oyster" style="color: #656565">
+              <span><span></span></span>Oyster ($2)
+            </label>
+          </div>
+          <div class="topping-container" title="Salmon topping | Price $2">
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-salmon"
+              value="salmon"
+            />
+            <label for="topping-salmon" style="color: #656565">
+              <span><span></span></span>Salmon ($2)
+            </label>
+          </div>
+          <div class="topping-container" title="Tuna topping | Price $2">
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-tuna"
+              value="tuna"
+            />
+            <label for="topping-tuna" style="color: #656565">
+              <span><span></span></span>Tuna ($2)
+            </label>
+          </div>
+          <div class="topping-container" title="Bacon topping | Price $3">
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-bacon"
+              value="bacon"
+            />
+            <label for="topping-bacon" style="color: #656565">
+              <span><span></span></span>Bacon ($3)
+            </label>
+          </div>
+          <div class="topping-container" title="Duck topping | Price $3">
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-duck"
+              value="duck"
+            />
+            <label for="topping-duck" style="color: #656565">
+              <span><span></span></span>Duck ($3)
+            </label>
+          </div>
+          <div class="topping-container" title="Ham topping | Price $3">
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-ham"
+              value="ham"
+            />
+            <label for="topping-ham" style="color: #656565">
+              <span><span></span></span>Ham ($3)
+            </label>
+          </div>
+          <div class="topping-container" title="Sausage topping | Price $3">
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-sausage"
+              value="sausage"
+            />
+            <label for="topping-sausage" style="color: #656565">
+              <span><span></span></span>Sausage ($3)
+            </label>
+          </div>
+        </div>
+
+        <div class="price-list">
+          <p class="price-header">Price</p>
+          <div class="price-container">
+            <p>&nbsp;&nbsp;Pizza + (Size) + Topping</p>
+            <p>
+              =&nbsp;
+              <span id="pizza-result">$0</span>
+              + (<span id="size-result">$0</span>) +
+              <span id="topping-result">$0</span>
+            </p>
+            <p>
+              =&nbsp;
+              <span id="total-result">$0</span>
+            </p>
+
+            <button type="button" id="reset-order">Reset Order</button>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-left">
+          <span>RWID Pizza Challenge</span>
+        </div>
+        <div class="footer-right">
+          <span
+            ><i class="fas fa-code"></i> with <i class="fas fa-heart"></i> by
+            <a href="https://remoteworker.id">ianrizky</a></span
+          >
+        </div>
+      </footer>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "plugins": ["jest"],
+  "extends": ["eslint:recommended", "plugin:jest/recommended", "prettier"],
+  "env": {
+    "node": true,
+    "browser": true
+  }
+}
