@@ -140,55 +140,53 @@ function availablePizzaTopping(check){
     switch(check){
         case "pizza-1-value":
             //able
-            document.getElementById('avocado-id').disabled=false;
-            document.getElementById('tuna-id').disabled=false;
-            document.getElementById('duck-id').disabled=false;
-            document.getElementById('sosis-id').disabled=false;
+            document.getElementById('topping-avocado').disabled=false;
+            document.getElementById('topping-tuna').disabled=false;
+            document.getElementById('topping-duck').disabled=false;
+            document.getElementById('topping-sausage').disabled=false;
 
-            document.getElementById('avocado-id').disabled=false;
-            document.getElementById('lobster-id').disabled=false;
-            document.getElementById('oyster-id').disabled=false;
-            document.getElementById('salmon-id').disabled=false;
+           
+            document.getElementById('topping-lobster').disabled=false;
+            document.getElementById('topping-oyster').disabled=false;
+            document.getElementById('topping-salmon').disabled=false;
             //disabled
-            document.getElementById('lobster-id').disabled=true;
-            document.getElementById('oyster-id').disabled=true;
-            document.getElementById('salmon-id').disabled=true;
-            document.getElementById('bacon-id').disabled=true;
-            document.getElementById('duck-id').disabled=true;
-            document.getElementById('sosis-id').disabled=true;
+            document.getElementById('topping-lobster').disabled=true;
+            document.getElementById('topping-oyster').disabled=true;
+            document.getElementById('topping-salmon').disabled=true;
+            document.getElementById('topping-bacon').disabled=true;
+            document.getElementById('topping-duck').disabled=true;
+            document.getElementById('topping-sausage').disabled=true;
             break;
         case "pizza-2-value":
             //able
-            document.getElementById('lobster-id').disabled=false;
-            document.getElementById('oyster-id').disabled=false;
-            document.getElementById('salmon-id').disabled=false;
-            document.getElementById('bacon-id').disabled=false;
-            document.getElementById('duck-id').disabled=false;
-            document.getElementById('sosis-id').disabled=false;
+            document.getElementById('topping-lobster').disabled=false;
+            document.getElementById('topping-oyster').disabled=false;
+            document.getElementById('topping-salmon').disabled=false;
+            document.getElementById('topping-bacon').disabled=false;
+            document.getElementById('topping-duck').disabled=false;
+            document.getElementById('topping-sausage').disabled=false;
 
-            document.getElementById('avocado-id').disabled=false;
-            document.getElementById('lobster-id').disabled=false;
-            document.getElementById('oyster-id').disabled=false;
-            document.getElementById('salmon-id').disabled=false;
+            document.getElementById('topping-avocado').disabled=false;
+            document.getElementById('topping-salmon').disabled=false;
             //disabled
-            document.getElementById('avocado-id').disabled=true;
-            document.getElementById('tuna-id').disabled=true;         
-            document.getElementById('duck-id').disabled=true;
-            document.getElementById('sosis-id').disabled=true;
+            document.getElementById('topping-avocado').disabled=true;
+            document.getElementById('topping-tuna').disabled=true;         
+            document.getElementById('topping-duck').disabled=true;
+            document.getElementById('topping-sausage').disabled=true;
             break;
         case "pizza-3-value":
             //able
-            document.getElementById('lobster-id').disabled=false;
-            document.getElementById('oyster-id').disabled=false;
-            document.getElementById('salmon-id').disabled=false;
-            document.getElementById('bacon-id').disabled=false;
-            document.getElementById('duck-id').disabled=false;
-            document.getElementById('sosis-id').disabled=false
+            document.getElementById('topping-lobster').disabled=false;
+            document.getElementById('topping-oyster').disabled=false;
+            document.getElementById('topping-salmon').disabled=false;
+            document.getElementById('topping-bacon').disabled=false;
+            document.getElementById('topping-duck').disabled=false;
+            document.getElementById('topping-sausage').disabled=false;
 
-            document.getElementById('avocado-id').disabled=false;
-            document.getElementById('tuna-id').disabled=false;
-            document.getElementById('duck-id').disabled=false;
-            document.getElementById('sosis-id').disabled=false;
+            document.getElementById('topping-avocado').disabled=false;
+            document.getElementById('topping-tuna').disabled=false;         
+            document.getElementById('topping-duck').disabled=false;
+            document.getElementById('topping-sausage').disabled=false;
             //disabled
             document.getElementById('avocado-id').disabled=true;
             document.getElementById('lobster-id').disabled=true;
