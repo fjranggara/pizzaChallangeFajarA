@@ -1,28 +1,26 @@
-const pizza={
-  pizzaPrice1:8, 
-  pizzaPrice2:10, 
-  pizzaPrice3:12,
-  pizzaPriceSmall=-1,
-  pizzaPriceMedium=0,
-  pizzaPriceLarge=2,
+const pizza = {
+  pizzaPrice1: 8,
+  pizzaPrice2: 10,
+  pizzaPrice3: 12,
+  pizzaPriceSmall: -1,
+  pizzaPriceMedium: 0,
+  pizzaPriceLarge: 2,
 };
 
-
-
-const topping={
- avocadoTopping: 1,
- brocoliTopping: 1,
- onionTopping :1,
- zuchiniTopping : 1,
- lobsterTopping : 2,
- oysterTopping : 2,
- salmonTopping : 2,
- tunaTopping : 2,
- baconTopping : 3,
- duckTopping : 3,
- hamTopping : 3, 
- sosisTopping : 3,
-}
+const topping = {
+  avocadoTopping: 1,
+  brocoliTopping: 1,
+  onionTopping: 1,
+  zuchiniTopping: 1,
+  lobsterTopping: 2,
+  oysterTopping: 2,
+  salmonTopping: 2,
+  tunaTopping: 2,
+  baconTopping: 3,
+  duckTopping: 3,
+  hamTopping: 3,
+  sosisTopping: 3,
+};
 
 let currentPrice = 0;
 let pizzaPrice = 0;
@@ -43,14 +41,13 @@ const writePizzaToppingPrice = document.querySelector(
 const writeTotalPrice = document.querySelector("p>span#total-result");
 const resetButton = document.getElementById("reset-order");
 
-
 for (let i = 0; i < pizzaSelections.length; i++) {
   pizzaSelections[i].addEventListener("click", getPizzaPrice);
 }
 
 function getPizzaPrice(ev) {
   currentPrice = 0;
-  pizzaSelection = ev.target.value; 
+  pizzaSelection = ev.target.value;
 
   for (let i = 0; i < pizzaToppings.length; i++) {
     pizzaToppings[i].checked = false;
@@ -74,7 +71,6 @@ function getPizzaPrice(ev) {
   writePizzaToppingPrice.innerHTML = `${toppingPrice}`;
   writePizzaPrice.innerHTML = `${pizzaPrice}`;
   writeTotalPrice.innerHTML = `${currentPrice}`;
-
 }
 
 for (let i = 0; i < pizzaSizes.length; i++) {
@@ -83,7 +79,7 @@ for (let i = 0; i < pizzaSizes.length; i++) {
 
 function getPizzaSizePrice() {
   currentPrice = pizzaPrice;
-  pizzaSize = this.value; 
+  pizzaSize = this.value;
 
   pizzaSize === "small" ? (pizzaSizePrice = pizza.pizzaPriceSmall) : "";
   pizzaSize === "medium" ? (pizzaSizePrice = pizza.pizzaPriceMedium) : "";
@@ -92,7 +88,6 @@ function getPizzaSizePrice() {
   currentPrice = pizzaPrice + toppingPrice + pizzaSizePrice;
   writePizzaSizePrice.innerHTML = `${pizzaSizePrice}`;
   writeTotalPrice.innerHTML = `${currentPrice}`;
-
 }
 
 for (const topping of pizzaToppings) {
@@ -118,7 +113,6 @@ function getPizzaToppingPrice(ev) {
   writeTotalPrice.innerHTML = `${currentPrice}`;
   writePizzaToppingPrice.innerHTML = `${toppingPrice}`;
 }
-
 
 function deleteTopping(list) {
   for (let i = 0; i < listPizzaTopping.length; i++) {
